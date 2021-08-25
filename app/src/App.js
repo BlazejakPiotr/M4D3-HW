@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <WarningSign message="Hello, this is working" />
-      <MyBadge text="Strive Badge" color="primary" />
+      <MyBadge text="Strive Badge" color="secondary" />
     </div>
   );
 }

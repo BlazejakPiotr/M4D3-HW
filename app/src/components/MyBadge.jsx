@@ -3,7 +3,7 @@ import Badge from "react-bootstrap/Badge";
 const MyBadge = ({ text, color }) => {
   return (
     <h4>
-      This is a <Badge bg={color}>{text}</Badge>
+      This is a <Badge variant={color}>{text}</Badge>
     </h4>
   );
 };
