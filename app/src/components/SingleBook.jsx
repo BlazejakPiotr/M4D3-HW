@@ -2,14 +2,27 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Component } from "react";
 
-const SingleBook = ({ singleBook }) => (
-  <Card style={{ width: "18rem" }} key={singleBook.asin}>
-    <Card.Img variant="top" src={singleBook.img} />
-    <Card.Body>
-      <Card.Title>{singleBook.title}</Card.Title>
+class SingleBook extends Component {
+  state = {
+    selected: false,
+  };
 
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card>
-);
+  render({ singleBook }) {
+    return (
+      <Card style={{ width: "18rem" }} key={singleBook.asin}>
+        <Card.Img variant="top" src={singleBook.img} />
+        <Card.Body>
+          <Card.Title>{singleBook.title}</Card.Title>
+
+          <Button
+            onClick={() => this.setState({ selected: true })}
+            variant="primary"
+          >
+            Go somewhere
+          </Button>
+        </Card.Body>
+      </Card>
+    );
+  }
+}
 export default SingleBook;
