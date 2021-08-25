@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Component } from "react";
 
 const SingleBook = ({ singleBook }) => (
   <Card style={{ width: "18rem" }} key={singleBook.asin}>
