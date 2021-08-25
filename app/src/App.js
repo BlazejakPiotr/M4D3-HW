@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import WarningSign from "./components/WarningSign";
+import WarningSign from "./components/WarningSign";
 
 function App() {
   return (
