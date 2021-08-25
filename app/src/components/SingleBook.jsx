@@ -1,11 +1,11 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-const SingleBook = ({ book }) => (
-  <Card style={{ width: "18rem" }}>
-    <Card.Img variant="top" src={book.img} />
+const SingleBook = ({ singleBook }) => (
+  <Card style={{ width: "18rem" }} key={singleBook.asin}>
+    <Card.Img variant="top" src={singleBook.img} />
     <Card.Body>
-      <Card.Title>{book.title}</Card.Title>
+      <Card.Title>{singleBook.title}</Card.Title>
 
       <Button variant="primary">Go somewhere</Button>
     </Card.Body>
