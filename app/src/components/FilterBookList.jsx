@@ -3,13 +3,14 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 // import SingleBook from "./SingleBook";
-// import BookList from "./BookList";
+import BookList from "./BookList";
 
 import books from "../data/history.json";
 
 class FilterBookList extends Component {
   state = {
     name: "",
+    books: books,
   };
 
   handleSearch = (e) => {
@@ -19,12 +20,12 @@ class FilterBookList extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = (e, name) => {
     e.preventDefault();
     const filteredBooks = books.filter((book) =>
-      book.title.includes(this.state.name)
+      book.title.toLowerCase().includes(this.state.name)
     );
-    console.log(filteredBooks);
+    this.setState({ books: filteredBooks });
   };
 
   render() {
@@ -42,7 +43,7 @@ class FilterBookList extends Component {
             Search
           </Button>
         </Form>
-        {/* <BookList booklist={this.handleSubmit} /> */}
+        <BookList booklist={this.state.books} />
       </div>
     );
   }

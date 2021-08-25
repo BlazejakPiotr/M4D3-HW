@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <WarningSign message="Hello, this is working" />
       <MyBadge text="Strive Badge" color="primary" />
-      <SingleBook singleBook={Books[0]} />
+      {/* <SingleBook singleBook={Books[0]} /> */}
       <BookList booklist={Books} />
       <FilterBookList />
     </div>
