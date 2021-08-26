@@ -25,6 +25,7 @@ class FilterBookList extends Component {
     const filteredBooks = books.filter((book) =>
       book.title.toLowerCase().includes(this.state.name)
     );
+
     this.setState({ books: filteredBooks });
   };
 
