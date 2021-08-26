@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import WarningSign from "./components/WarningSign";
 import SingleBook from "./components/SingleBook";
 import FilterBookList from "./components/FilterBookList";
@@ -18,6 +19,5 @@ function App() {
       <FilterBookList />
     </div>
   );
-}
 
 export default App;
